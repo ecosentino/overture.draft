@@ -1,0 +1,643 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --sidebar-color:rgb(255,255,255);
+
+    --text-color:rgb(0,0,0);
+
+    --sidebar-text-color:rgb(134,136,144);
+
+    --menu-hover-color:rgb(rgb(215, 215, 215));
+
+    --menu-hover-text-color:rgb(rgb(0, 0, 0));
+
+    --button-color:rgb(134,136,144);
+
+    --button-text-color:rgb(255,255,255);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    boz-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(232,232,232);
+}
+
+/*--------------> Menu */
+
+.menu{
+    position: fixed;
+    width: 45px;
+    height: 45px;
+    font-size:33px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: rgb(232,92,74);
+    color: white;
+    right: 15px;
+    top: 25px;
+    z-index: 1;
+}
+
+/*--------------> Sidebar */
+
+.sidebar{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content:left;
+    width: 360px;
+    height: 100%;
+    overflow: hidden;
+    padding: 20px 15px;
+    background-color: var(--sidebar-color);
+    transition: width 0.4s ease, left 0.4s ease;
+}
+
+.mini-sidebar{
+    width: 30px;
+}
+
+.sidebar span{
+    width: 160px;
+    white-space: nowrap;
+    font-size: 18px;
+    text-align: left;
+    font-family: 
+    opacity: 1;
+    transition: opacity 0.4s ease, width: 0.4s ease;
+}
+
+.sidebar span.hidden{
+    opacity: 0;
+    width: 0;
+}
+
+/*--------------> Name of the site */
+.sidebar .site-name{
+    width: 100%;
+    height: 45px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+
+.davitri-icon{
+    height: 45px;
+    cursor: pointer;
+}
+
+.sidebar .site-name span{
+    margin-left: 10px;
+    font-size: 26px;
+}
+
+/*--------------> Button */
+.sidebar .button{
+    width: 100%;
+    height: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--button-color);
+    color: var(--button-text-color);
+    margin-bottom: 20px;
+}
+
+.sidebar .button ion-icon{
+    width: 45px;
+    font-size:25px;
+}
+
+.sidebar .button span{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/*--------------> Menu Navigation */
+
+.sidebar .navigation{
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.sidebar .navigation::-webkit-scrollbar{
+    width: 5px;
+}
+
+.sidebar .navigation::-webkit-scrollbar-thumb{
+    background-color: rgb(134,136,144);
+}
+
+.sidebar .navigation::-webkit-scrollbar-thumb:hover{
+    background-color: black;
+}
+
+.sidebar .navigation li{
+    list-style: none;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.sidebar .navigation span{
+    font-size: 16px;
+}
+
+.sidebar .navigation a{
+    width: 100%;
+    height: 33;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 10px;
+    color: var(--sidebar-text-color);
+}
+
+.sidebar .navigation a:hover{
+    color: var(--menu-hover-text-color);
+}
+
+.sidebar .navigation ion-icon{
+    width:45px;
+    font-size: 25px;
+}
+
+/*------------------> Cover*/
+
+.cover-container{
+    width: 100%;
+    height: 640px;
+    margin-bottom: 10px;
+    border-radius: 80px;
+    background-color: white;
+    align-items: center;
+}
+
+.overture-logo{
+    width: 100%;
+    height: 30px;
+    margin-top: 45px;
+}
+
+.container-title{
+    width: 100%;
+    height: 100px;
+    margin-top: 25px;
+    text-align: center;
+    font-size: 80px;
+    font-weight: 600;
+}
+
+.container-subtitle{
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    font-size: 56px;
+    font-weight: 600;
+    color: rgb(232,92,74);
+}
+
+.cover-image{
+    width: 100%;
+    height: 280px;
+    font-size: 56px;
+    font-weight: 600;
+    color: rgb(232,92,74);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cover-image-img{
+    height: 280px;
+}
+
+/*------------------> Cautions and Notes*/
+
+.note{
+    font-size: 10px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.caution-1{
+    width: 100%;
+    height: 45px;
+    border-radius: 100px;
+    font-weight: 600;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    border: 2px solid rgb(232,92,74);
+    color: rgb(232,92,74);
+}
+
+.caution-2{
+    width: 100%;
+    border-radius: 50px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    border: 2px solid rgb(232,92,74);
+    color: rgb(232,92,74);
+    padding: 0;
+}
+
+.caution-2-text{
+    padding: 20px;
+    font-weight: 600;
+}
+
+.caution-3{
+    width: 100%;
+    border-radius: 50px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    border: 2px solid rgb(232,92,74);
+    color: rgb(232,92,74);
+    padding: 0;
+}
+
+.caution-3-text{
+    padding: 20px;
+    font-weight: 600;
+}
+
+/*------------------> Section*/
+
+.section{
+    width: 100%;
+    margin-top: 60px;   
+    border-top: 2px solid black;
+}
+
+.section-title{
+    font-size: 26px;
+    font-weight: 600;
+    padding-top: 5px;
+    margin-top: 60px;
+}
+
+.section-subtitle{
+    font-size: 26px;
+    font-weight: 700;
+    padding-top: 5px;
+    font-size: 14px;
+}
+
+.section-text{
+    font-size: 14px;
+    line-height: 170%;
+}
+
+.section-text-strong{
+    font-weight: 700;
+}
+
+.section-text li{
+    margin-left: 18px;
+}
+
+.section-image{
+    width: 100%;
+    height: 280px;
+    font-size: 56px;
+    font-weight: 600;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.section-image-img{
+    height: 280px;
+}
+
+/*------------------> Preparation and System StartUp*/
+
+.materials-list{
+    width: 100%;
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border-radius: 30px;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+.materials-list-item{
+    width: 96%;
+    height: 45px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 400;
+    color: black;
+    border-bottom: 2px solid rgb(232,232,232);
+    line-height: 45px;
+}
+
+.materials-list-item-noline{
+    width: 96%;
+    height: 45px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 400;
+    color: black;
+    line-height: 45px;
+}
+
+.info-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border-radius: 30px;
+    background-color: white;
+    align-items: center;
+}
+
+.info-container-text{
+    width: 96%;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 400;
+    color: black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/*------------------> Cryo chart*/
+
+.visor{
+    width: 100%;
+    height: 216px;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border-radius: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.visor-img{
+    width: 315px;
+    height: 216px;
+    border-radius: 60px 60px 20px 20px;
+    background-color: black;
+}
+
+/*------------------> Cryo chart*/
+
+.cryo-chart{
+    widtht: 100%;
+    height: 120px;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.cryo-chart-title{
+    width: 100%;
+    height: 45px;
+    border-radius: 100px;
+    font-weight: 600;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    border: 2px solid;
+    color: black;
+}
+
+.cryo-box-1{
+    width: 12.5%;
+    height: 120px;
+    background-color: rgb(39,63,114);
+    padding: 5px;
+    border-radius: 100% 0 0 100%;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+    margin-right: 3px;
+}
+
+.cryo-box-2{
+    width: 12.5%;
+    height: 120px;
+    background-color: rgb(39,63,114);
+    padding: 5px;
+    border-radius: 0%;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+    margin-right: 3px;
+}
+
+.cryo-box-3{
+    width: 12.5%;
+    height: 120px;
+    background-color: rgb(39,63,114);
+    padding: 5px;
+    border-radius: 0 100% 100% 0;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+}
+
+.cryo-box-time{
+    color: rgb(232,92,74);
+    font-weight: 600;
+}
+
+/*------------------> Table of contents*/
+
+.table-of-contents-item{
+    background-color: rgb(232,92,74);
+    padding: 20px;
+    border-radius: 30px;
+    margin-bottom: 10px;
+}
+
+.table-of-contents-single-item{
+    background-color: rgb(232,92,74);
+    padding-top: 20px;
+    padding-left: 34px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    border-radius: 30px;
+    margin-bottom: 10px;
+}
+
+.table-of-contents-title{
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.table-of-contents-title a{
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.table-of-contents-title a:hover{
+    color: black;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.table-of-contents-subtitle{
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 20px;
+    padding-left: 28px;
+}
+
+.table-of-contents-subtitle a{
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.table-of-contents-subtitle a:hover{
+    color: black;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.table-of-contents-sub-subtitle{
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 20px;
+    padding-left: 56px;
+}
+
+.table-of-contents-sub-subtitle a{
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.table-of-contents-sub-subtitle a:hover{
+    color: black;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+/*--------------> Main */
+
+main{
+    margin-left: 400px;
+    padding: 20px;
+    transition: margin-left 0.5s ease;
+}
+
+main.min-main{
+    margin-left: 70px;
+    padding: 20px;
+}
+
+/*------------------> Responsive*/
+
+@media (max-height: 660px){
+    .sidebar .site-name{
+        margin-bottom: 20px;
+    }
+
+}
+@media (max-width: 600px){
+    .sidebar{
+        position: fixed;
+        left: -700px;
+    }
+
+    .section{
+        left: 0;
+    }
+
+    .max-sidebar{
+        left: 0;
+    }
+    .menu{
+        display: flex;
+    }
+    .menu ion-icon:nth-child(2){
+        display: none;
+    }
+    main{
+        margin-left: 0;
+    }
+    main.min-main{
+        margin-left: 0;
+        padding-left: 100px;
+    }
+
+    .cryo-chart{
+        flex-direction: column;
+        height: 900px;
+    }
+
+    .cryo-box-1{
+        width: 100%;
+        height: 80px;
+        border-radius: 100% 100% 0 0;
+        margin-bottom: 3px;
+    }
+
+    .cryo-box-2{
+        width: 100%;
+        height: 80px;
+        border-radius: 0%;
+        margin-bottom: 3px;
+    }
+
+    .cryo-box-3{
+        width: 100%;
+        height: 80px;
+        border-radius: 0 0 100% 100%;
+        margin-bottom: 3px;
+    }
+    
+}
